@@ -5,9 +5,8 @@
   <title>API PARTICULIER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/landingPage.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <base href="/">
+  <link rel="stylesheet" href="css/landingPage.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div id="wrapper">
@@ -27,7 +26,7 @@
                       </button>
                       <ul class="nav navbar-nav">
                         <li><img class="logo" src="img/logo_marianne.png" alt="Accueil - apiparticulier.sgmap.fr"></li>
-                        <li><a ui-sref="landingPage" class="navbar-brand title" title="Accueil - apiparticulier.sgmap.fr" href="/">API Particulier</a></li>
+                        <li><a ui-sref="landingPage" class="navbar-brand title" title="Accueil - apiparticulier.sgmap.fr" href="./">API Particulier</a></li>
                       </ul>
                   </div>
                   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,19 +59,34 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h3>Documentation technique</h3>
+                <h3>Demande d'accès</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12" >
                 <p class="lead">
-                  Vous pouvez, dès maintenant, commencer à intégrer API Particulier :
-                  <ul>
-                    <li class="lead"><a href="/tech">Avec l'espace développeur</a></li>
-                    <li class="lead">Avec l'environnement d'intégration <a href="https://apiparticulier-test.sgmap.fr/api/ping">apiparticulier-test.sgmap.fr</a></li>
-                    <li class="lead">Et sa <a href="https://apiparticulier-test.sgmap.fr/docs/">documentation</a></li>
-                  </ul>
+                  Merci de nous envoyer un mail avec les informations suivantes :
+
                 </p>
+                <ul class="lead">
+                  <li>votre collectivité</li>
+                  <li>votre numéro de téléphone</li>
+                  <li>une description succincte de votre projet</li>
+                </ul>
+                <div id="mailAdress" class="text-center">
+                  <p>
+                    <a href="mailto:contact@particulier.api.gouv.fr">contact@particulier.api.gouv.fr</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 text-right">
+                <a class="btn btn-default btn-lg btn-primary"
+                href="./tech.html">
+                  Commencez dès maintenant
+                </a>
               </div>
             </div>
           </div>
