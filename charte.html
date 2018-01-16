@@ -164,17 +164,16 @@
             </div>
           </div>
 
-          <form class="text-center">
-            <label class="checkDroits lead">
-              <input type="checkbox" id="checkCharte"> J'ai compris et j'accepte
-              <a href="./charte.pdf" target="_blank"> la convention d’adhésion à d’API Particulier</a>
-            </label>
-          </form>
-
           <div class="text-right">
-            <a id="next" class="btn btn-default btn-lg btn-primary disabled"
-                href="./contact.html">
-              Demandez un jeton
+            <a class="btn btn-default btn-lg default"
+                href="./charte.pdf"
+                target="_blank">
+              Télécharger la convention d’adhésion à d’API Particulier
+            </a>
+            <a class="btn btn-default btn-lg btn-primary"
+                href="https://tps.apientreprise.fr/commencer/demande-de-connexion-api-particulier"
+                target="_blank">
+              Demander un jeton
             </a>
           </div>
         </div>
@@ -241,18 +240,6 @@
     if(isChecked) {
       valid.style = "display:none;";
       invalid.style = "display:block;";
-    }
-  })
-</script>
-
-<script>
-  document.querySelector('#checkCharte').addEventListener('change', function(e) {
-    var isChecked = e.target.checked;
-    var button = document.querySelector('#next')
-    if(isChecked) {
-      button.className = "btn btn-default btn-lg btn-primary";
-    } else {
-      button.className = "btn btn-default btn-lg btn-primary disabled";
     }
   })
 </script>
