@@ -1,313 +1,319 @@
 <!doctype html>
-<html ng-app="app" lang="en">
+<html itemscope itemtype="http://schema.org/WebPage" lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>API Particulier</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/landingPage.css">
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>API Particulier</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/template.data.gouv.fr@1.1.4/dist/style/main.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Search Engine -->
+    <meta name="description" content="Vos démarches sans pièces justificatives">
+    <meta name="image" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="API Particulier">
+    <meta itemprop="description" content="Vos démarches sans pièces justificatives">
+    <meta itemprop="image" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="API Particulier">
+    <meta name="twitter:description" content="Vos démarches sans pièces justificatives">
+    <meta name="twitter:site" content="@APIGouv">
+    <meta name="twitter:creator" content="APIGouv">
+    <meta name="twitter:image:src" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="API Particulier">
+    <meta name="og:description" content="Vos démarches sans pièces justificatives">
+    <meta name="og:image" content="https://particulier.api.gouv.fr/img/preview_fb.jpg">
+    <meta name="og:url" content="https://particulier.api.gouv.fr/">
+    <meta name="og:site_name" content="API Particulier">
+    <meta name="og:locale" content="fr_FR">
+    <meta name="og:type" content="website">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
 </head>
 <body>
-  <div id="wrapper">
-    <div id="content">
-          <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-              <div class="container topnav">
-                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                      <ul class="nav navbar-nav">
-                        <li><img class="logo" src="img/logo_marianne.png" alt="logo Marianne"></li>
-                        <li><a href="." class="navbar-brand title" href="./">API Particulier</a></li>
-                      </ul>
-                  </div>
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav navbar-right">
-                          <li>
-                              <a href="mailto:contact@particulier.api.gouv.fr">Contactez-nous</a>
-                          </li>
-                          <li>
-                            <a href="https://particulier.api.gouv.fr/tech">
-                              <i class="fa fa-book fa-fw"></i>
-                              <span>Documentation technique</span>
-                            </a>
-                          </li>
-                      </ul>
-                  </div>
-                  <!-- /.navbar-collapse -->
-              </div>
-              <!-- /.container -->
-          </nav>
+<svg aria-hidden="true" focusable="false" style="display:none">
+    <defs>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-verified-user" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-spellcheck" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12.45 16h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64l1.14 3zm-6.02-5L8.5 5.48 10.57 11H6.43zm15.16.59l-8.09 8.09L9.83 16l-1.41 1.41 5.09 5.09L23 13l-1.41-1.41z"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-touch-app" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="a" d="M0 0h24v24H0V0z"/>
+            </defs>
+            <clipPath id="b">
+                <use xlink:href="#a" overflow="visible"/>
+            </clipPath>
+            <path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"
+                  clip-path="url(#b)"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="twitter" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.003 6.695c-1.102.492-2.291.82-3.533.966a6.185 6.185 0 0 0 2.706-3.404 12.404 12.404 0 0 1-3.908 1.495 6.154 6.154 0 0 0-4.495-1.94 6.153 6.153 0 0 0-5.994 7.553A17.468 17.468 0 0 1 3.093 4.932a6.15 6.15 0 0 0-.831 3.094 6.147 6.147 0 0 0 2.736 5.122 6.16 6.16 0 0 1-2.789-.768v.076a6.154 6.154 0 0 0 4.94 6.034 6.149 6.149 0 0 1-2.783.106 6.177 6.177 0 0 0 5.748 4.277 12.347 12.347 0 0 1-9.117 2.549 17.4 17.4 0 0 0 9.44 2.766c11.32 0 17.513-9.381 17.513-17.514 0-.269-.005-.533-.017-.796a12.405 12.405 0 0 0 3.07-3.182v-.001z"
+                  fill-rule="nonzero"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="github" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 1.371c-8.284 0-15 6.715-15 15 0 6.627 4.298 12.25 10.258 14.233.75.138 1.026-.326 1.026-.722 0-.357-.014-1.54-.021-2.793-4.174.907-5.054-1.77-5.054-1.77-.682-1.733-1.665-2.195-1.665-2.195-1.361-.931.103-.912.103-.912 1.506.106 2.299 1.546 2.299 1.546 1.338 2.293 3.509 1.63 4.365 1.247.134-.969.523-1.631.952-2.006-3.331-.379-6.834-1.666-6.834-7.413 0-1.638.586-2.976 1.546-4.027-.156-.378-.669-1.903.145-3.969 0 0 1.26-.403 4.126 1.537a14.453 14.453 0 0 1 3.755-.505c1.274.006 2.558.173 3.757.505 2.864-1.94 4.121-1.537 4.121-1.537.816 2.066.303 3.591.147 3.969.962 1.05 1.544 2.389 1.544 4.027 0 5.761-3.509 7.029-6.849 7.401.538.466 1.017 1.379 1.017 2.778 0 2.007-.018 3.623-.018 4.117 0 .399.27.867 1.03.72C26.707 28.616 31 22.996 31 16.371c0-8.285-6.716-15-15-15z"
+                  fill-rule="nonzero"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="envelope" xmlns="http://www.w3.org/2000/svg">
+            <g fill-rule="nonzero">
+                <path d="M30.1 5.419c-9.355-.002-18.733-.005-28.1-.005A1.06 1.06 0 0 0 .975 6.439v19.122A1.06 1.06 0 0 0 2 26.586h28a1.061 1.061 0 0 0 1.025-1.025V6.439a1.056 1.056 0 0 0-.925-1.02zM3.025 7.464h25.95v17.072H3.025V7.464z"/>
+                <path d="M30.06 9.513c.933.098 1.382 1.395.393 1.945L16.54 18.287c-.438.188-.479.178-.893 0L1.733 11.458c-1.743-.968-.065-2.254.894-1.842l13.466 6.61 13.562-6.651c.3-.094.312-.062.405-.062z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+<header class="navbar" role="navigation">
+    <div class="navbar__container">
+        <a class="navbar__home" href="index.html">
+            <img class="navbar__logo" src="img/logo-marianne.svg"
+                 alt="particulier.beta.gouv.fr"/><span class="navbar__domain">particulier</span><img
+                src="img/pointapigouvfr.svg" class="navbar__gouvfr" alt=".api.gouv.fr"/>
+        </a>
 
-
-          <!-- Header -->
-          <a name="about"></a>
-          <div class="intro-header">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-12">
-                          <div class="intro-message">
-                              <h1>API Particulier</h1>
-                              <h3>
-                                Simplifiez les démarches de vos usagers, ne demandez plus de
-                                justificatifs
-                              </h3>
-                              <hr class="intro-divider">
-                              <ul class="list-inline intro-social-buttons">
-                                <li>
-                                  <a class="btn btn-default btn-lg btn-inverse"
-                                      href="https://signup.api.gouv.fr/api-particulier">
-                                    Demander un accès
-                                  </a>
-                                </li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- /.container -->
-
-          </div>
-          <!-- /.intro-header -->
-
-          <!-- Page Content -->
-
-      	<a  name="services"></a>
-
-          <section class="content-a">
-
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-7 col-sm-9">
-                          <h2 class="section-heading">Ne plus demander de pièces
-                             justificatives inutiles</h2>
-                          <p class="lead">Limiter les demandes des pièces justificatives
-                            ou informations lorsqu’elles sont détenues par d’autres
-                            administrations (
-                            <abbr title="Caisse d'Allocation Familiale">CAF</abbr>,
-                            <abbr title="Direction générale des Finances publiques">
-                              DGFIP</abbr>, Pôle Emploi…).</p>
-                          <p class="lead">Limiter le risque de fraude documentaire en
-                            récupérant des informations certifiées à la
-                            source dans un point d'accès unique.</p>
-                      </div>
-                      <div class="col-lg-4 col-lg-offset-1  col-sm-3 hidden-xs">
-                          <img class="img-responsive" src="./img/dossiers.jpg" alt="">
-                      </div>
-                  </div>
-
-              </div>
-              <!-- /.container -->
-
-          </section>
-
-          <section class="content-b">
-
-              <div class="container">
-
-                  <div class="row">
-                      <div class="col-lg-4 col-sm-3">
-                          <img class="img-responsive" src="img/environmental-protection.jpg" alt="">
-                      </div>
-                      <div class="col-lg-7 col-lg-offset-1 col-sm-9">
-                          <h2 class="section-heading">Accéder aux données de façon
-                            sécurisée</h2>
-                          <p class="lead">L'accès aux données est réalisé au travers
-                            de protocoles de communications sécurisés et seuls les
-                            opérateurs agréés peuvent se connecter à l'API.</p>
-                          <p class="lead">Pour obtenir un agrément, vous devez
-                            justifier d'une simplification pour les citoyens, et
-                            vous engager à n'accéder aux données personnelles qu'avec
-                            <b>l'accord explicite de l'usager</b>.</p>
-                          <p>
-                            <a href="./charte.pdf" class="btn btn-primary">
-                              <i class="fa fa-book fa-fw"></i>
-                              <span>Consulter la charte</span>
-                            </a>
-                          </p>
-                      </div>
-                  </div>
-
-              </div>
-              <!-- /.container -->
-
-          </section>
-          <!-- /.content-b -->
-
-          <section class="content-a">
-
-              <div class="container">
-
-                  <div class="row">
-                      <div class="col-lg-7 col-sm-9">
-                          <h2 class="section-heading">
-                            Comprendre la différence avec FranceConnect
-                          </h2>
-
-                          <p class="lead">
-                            API Particulier et FranceConnect sont deux systèmes
-                            indépendants mais complémentaires.
-                          </p>
-
-                          <table class="table">
-                            <tr>
-                              <th></th>
-                              <th>
-                                FranceConnect
-                              </th>
-                              <th>
-                                API Particulier
-                              </th>
-                            </tr>
-                            <tr>
-                              <th>
-                                Nature
-                              </th>
-                              <td>
-                                Fournisseur d’Identité et tiers de confiance                        </td>
-                              <td>
-                                Fournisseur de Données
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>
-                                Identification
-                              </th>
-                              <td>
-                                Citoyen et Fournisseur de Service
-                              </td>
-                              <td>
-                                Fournisseur de Service
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>
-                                Type de donnée
-                              </th>
-                              <td>
-                                liée à la personne
-                              </td>
-                              <td>
-                                liée à la personne, au foyer familial, aux parents et aux enfants
-                              </td>
-                            </tr>
-                          </table>
-
-                          <p class="lead">
-                            API Particulier et FranceConnect peuvent être utilisés
-                            seul ou conjointement.
-                          </p>
-                      </div>
-                      <div class="col-lg-3 col-lg-offset-2 col-sm-3">
-                          <img class="img-responsive" src="img/logo-fc.png" alt="">
-                      </div>
-                  </div>
-
-              </div>
-              <!-- /.container -->
-
-          </section>
-          <!-- /.content-a -->
-
-          <a  name="start"></a>
-
-          <section class="content-b">
-
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h2 class="section-heading">
-                    Catalogue des données fournies par API Particulier
-                  </h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item list-group-item-info">
-                      <h3 class="list-group-item-heading">Direction Générale des Finances Publiques</h3>
-                    </li>
-                    <li class="list-group-item">
-                      <h4 class="list-group-item-heading">Avis d'imposition</h4>
-                      <p class="list-group-item-text">
-                        Contient le revenu fiscal de référence, le nombre de part et
-                        les déclarants
-                      </p>
-
-                    </li>
-                    <li class="list-group-item">
-                      <h4 class="list-group-item-heading">Adresse fiscale</h4>
-                      <p class="list-group-item-text">
-                        Contient l'adresse fiscale ainsi que l'adresse structurée et styles
-                        coordonnée GPS
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item list-group-item-info">
-                      <h3 class="list-group-item-heading">Caisse d'Allocation Familiales</h3>
-                    </li>
-                    <li class="list-group-item">
-                      <h4 class="list-group-item-heading">Quotient familial</h4>
-                      <p class="list-group-item-text">
-                        Contient le quotient familial du mois précédent
-                      </p>
-
-                    </li>
-                    <li class="list-group-item">
-                      <h4 class="list-group-item-heading">Composition familiale</h4>
-                      <p class="list-group-item-text">
-                        Contient les parents et les enfants de la familles déclaré à la
-                        <abbr title="Caisse d'Allocation Familiale">CAF</abbr>
-                      </p>
-                    </li>
-
-                    <li class="list-group-item">
-                      <h4 class="list-group-item-heading">Adresse</h4>
-                      <p class="list-group-item-text">
-                        Contient l'adresse déclarée à la
-                        <abbr title="Caisse d'Allocation Familiale">CAF</abbr>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </section>
-          <section>
-            <div class="container">
-              <div class="col-md-12 text-center">
-                <p>
-                  <a class="btn btn-default btn-lg btn-primary"
-                      href="https://signup.api.gouv.fr/api-particulier">
-                    <i class="fa fa-4 fa-hand-o-right"></i> Demander un accès
-                  </a>
-                </p>
-              </div>
-            </div>
-          </section>
-          <!-- /.banner -->
-
-          <footer>
-              <div class="container">
-                <div class="row">
-                    <div class="center-block">
-                        <p class="copyright">
-                          <a href="mailto:contact@particulier.api.gouv.fr">Nous contacter</a>
-                        </p>
-                      </div>
-                  </div>
-              </div>
-          </footer>
+        <nav>
+            <ul class="nav__links">
+                <li class="nav__item"><a href="https://api.gouv.fr/apropos">À propos</a></li>
+                <li class="nav__item"><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Nous contacter</a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
+</header>
+
+<div class="hero" role="banner">
+    <div class="hero__container">
+        <div class="row">
+            <div class="column illustration">
+                <img class="city-illustration" src="img/illustration.svg" alt="Illustration">
+            </div>
+            <div class="column">
+                <h1>
+                    particulier.api.gouv.fr
+                </h1>
+                <p>
+                    Vos démarches sans pièces justificatives
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section-color">
+    <div class="container">
+        <p class="section__subtitle">API Particulier simplifie les démarches des usagers en permettant l’échange
+            d’information les concernant d’une administration à une autre</p>
+    </div>
+</section>
+
+<section class="section-white">
+    <div class="container">
+        <h2 class="section__title">Pour l’usager, une démarche facilitée</h2>
+
+        <div class="row three-equal-column">
+            <div class="column text-center">
+                <div style="font-size: 70px">1</div>
+                <h3>J’entame une démarche sur le site de ma commune</h3>
+            </div>
+            <div class="column text-center">
+                <div style="font-size: 70px">2</div>
+                <h3>Je saisis mes identifiants (ex&nbsp;:&nbsp;numéro&nbsp;fiscal et numéro d'avis d'imposition)</h3>
+            </div>
+            <div class="column text-center">
+                <div style="font-size: 70px">3</div>
+                <h3>Je n’ai plus rien à faire ! Les informations récupérées via API Particulier tiennent lieu de
+                    justificatif opposable</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <h2 class="section__title">Pour ma commune, des informations certifiées à la source</h2>
+
+        <div class="row three-equal-column">
+            <div class="column text-center">
+                <div>
+                    <svg class="icon icon-cross" style="font-size: 70px">
+                        <use xlink:href="#material-touch-app"></use>
+                    </svg>
+                </div>
+                <h3>Affranchissez vous des pièces justificatives</h3>
+            </div>
+            <div class="column text-center">
+                <div>
+                    <svg class="icon icon-cross" style="font-size: 70px">
+                        <use xlink:href="#material-spellcheck"></use>
+                    </svg>
+                </div>
+                <h3>Réduisez le nombre d’erreurs de saisies</h3>
+            </div>
+            <div class="column text-center">
+                <div>
+                    <svg class="icon icon-cross" style="font-size: 70px">
+                        <use xlink:href="#material-verified-user"></use>
+                    </svg>
+                </div>
+                <h3>Écartez le risque de fraude documentaire</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-white">
+    <div class="container">
+        <h2 class="section__title">Accéder aux données de façon sécurisée</h2>
+        <p>
+            API Particulier permet de récupérer des informations certifiées à
+            la source dans un point d'accès unique : l'API (voir aussi
+            <a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a>).
+        </p>
+        <p>
+            L'accès aux données est réalisé au travers
+            de protocoles de communications sécurisés et seuls les
+            opérateurs agréés peuvent se connecter à l'API.
+        </p>
+        <p>
+            Pour obtenir un agrément, vous devez
+            justifier d'une simplification pour les citoyens, et
+            vous engager à n'accéder aux données personnelles qu'avec
+            <b>l'accord explicite de l'usager</b>.
+        </p>
+        <div class="row">
+            <div style="margin: auto">
+                <a href="./charte.pdf">
+                    <button class="button secondary">Consulter la charte</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-color">
+    <div class="container multiple_subtitles">
+        <h2 class="section__title">Catalogue des données fournies par API Particulier</h2>
+
+
+        <p class="section__subtitle">
+            Direction Générale des Finances Publiques
+        </p>
+
+        <div class="row three-equal-column">
+            <div class="column text-center">
+                <h4>Avis d'imposition</h4>
+                Contient le revenu fiscal de référence, le nombre de part et les déclarants
+            </div>
+            <div class="column text-center">
+                <h4>Adresse fiscale</h4>
+                Contient l'adresse fiscale ainsi que l'adresse structurée et styles coordonnée GPS
+            </div>
+        </div>
+
+        <p class="section__subtitle">
+            Caisse d'Allocation Familiales
+        </p>
+
+        <div class="row three-equal-column">
+            <div class="column text-center">
+                <h4>Quotient familial</h4>
+                Contient le quotient familial du mois précédent
+            </div>
+            <div class="column text-center">
+                <h4>Composition familiale</h4>
+                Contient les parents et les enfants de la famille déclarée à la CAF
+            </div>
+            <div class="column text-center">
+                <h4>Adresse</h4>
+                Contient l'adresse déclarée à la CAF
+            </div>
+        </div>
+
+        <p class="section__subtitle">
+            <a href="https://api.gouv.fr/api/api-particulier.html#technique">
+                <button class="button secondary">Je cherche ma donnée dans l'environnement "bac à sable"</button>
+            </a>
+        </p>
+    </div>
+</section>
+
+
+<section class="section-white">
+    <div class="container">
+        <h2 class="section__title">Pour accèder aux données, nous vous attribuons un jeton d'accès secret</h2>
+        <p class="section__subtitle">
+            <a href="https://signup.api.gouv.fr/api-particulier">
+                <button class="button">Obtenir mon jeton</button>
+            </a>
+        </p>
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <h2 class="section__title">Ils utilisent API Particulier</h2>
+        <p class="text-quote">
+            “API particulier c’est génial ! Nos usagers n’ont plus rien à scanner.”</br>
+            <i>Aurélie Coutant, Mairie de Clamart</i>
+        </p>
+        <p>
+            Depuis 2017, les habitants de Clamart (92) qui utilise le Portail Famille pour inscrire leurs enfants à des activités périscolaires n’ont plus à scanner leur fiche d’imposition. La commune dématérialise le calcul de leur quotient familial grâce à la donnée fournie par API Particulier.
+        </p>
+    </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer__logo">
+            <img src="img/api-gouv-fr-logo.svg" alt="Logo api.gouv.fr">
+            <ul class="footer__social">
+                <li><a href="https://twitter.com/APIGouv" title="Twitter">
+                    <svg class="icon icon-twitter">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a></li>
+                <li><a href="https://github.com/orgs/betagouv/teams/api-particulier" title="Github">
+                    <svg class="icon icon-github">
+                        <use xlink:href="#github"></use>
+                    </svg>
+                </a></li>
+                <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr" title="Nous écrire un mail">
+                    <svg class="icon icon-mail">
+                        <use xlink:href="#envelope"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <ul class="footer__links">
+            <li><h2>particulier.api.gouv.fr</h2></li>
+            <li><a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="https://api.gouv.fr/apropos#mentions-légales">Mentions légales</a></li>
+            <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Contactez nous</a></li>
+        </ul>
+        <ul class="footer__links"></ul>
+    </div>
+</footer>
 </body>
 </html>

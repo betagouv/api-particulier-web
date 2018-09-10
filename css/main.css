@@ -1,67 +1,44 @@
-.col-centered {
-    float: none;
+.hero {
+    background: linear-gradient(to top, #fef7df 47%, #d7edff 47%);
+}
+
+.hero h1,
+.hero p {
+    color: #000;
+}
+
+.hero p {
+    margin: 0;
+}
+
+.hero__container {
+    width: 80%;
     margin: 0 auto;
 }
 
-.logo {
-  margin: 5px;
+.hero__container > .row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-inverse {
-  background-color: whitesmoke;
-  color: back;
-  border: 2px solid whitesmoke;
-  padding: 20px 30px;
-  font-size: 2rem;
+.hero .illustration {
+    width: 50%;
 }
 
-.btn-inverse:hover {
-  background-color: transparent;
-  color: whitesmoke;
+.city-illustration {
+    width: 100%;
 }
 
-.site-example h4 {
-  margin-bottom: 15px
+.row.three-equal-column .column {
+    flex-basis: 33%;
+    justify-content: flex-start;
 }
 
-.site-example img {
-  margin-bottom: 15px
+.container.multiple_subtitles .section__title {
+    margin: 0 auto 1em;
 }
 
-.site-example p {
-  margin-bottom: 15px
-}
-
-.site-example img {
-  opacity: 0.5
-}
-
-.site-example img:hover {
-  opacity: 0.9
-}
-
-#mailAdress {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  font-size: x-large;
-  font-weight: bold;
-}
-
-fieldset legend {
-  border: none;
-  font-size: 1.4em;
-  margin-bottom: 5px;
-}
-
-div.radio-type-wrapper {
-  margin-left: 30px;
-}
-
-.panel-default {
-  background-color: whitesmoke;
-  padding: 10px 25px;
-}
-
-.panel-default p.lead {
-  margin-top: 20px;
+.container.multiple_subtitles .section__subtitle {
+    margin: 3em auto 1em;
 }
