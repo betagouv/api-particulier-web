@@ -124,12 +124,17 @@
     <div class="container">
         <p class="section__subtitle">API Particulier simplifie les démarches des usagers en permettant l’échange
             d’information les concernant d’une administration à une autre</p>
+        <p class="section__subtitle">
+            <a href="https://signup.api.gouv.fr/api-particulier">
+                <button class="button secondary">Obtenir un accès pour mon adminstration</button>
+            </a>
+        </p>
     </div>
 </section>
 
 <section class="section-white">
     <div class="container">
-        <h2 class="section__title">Pour ma commune, des informations certifiées à la source</h2>
+        <h2 class="section__title">Pour mon administration, des informations certifiées à la source</h2>
 
         <div class="row three-equal-column">
             <div class="column text-center">
@@ -167,11 +172,11 @@
         <div class="row three-equal-column">
             <div class="column text-center">
                 <div style="font-size: 70px">1</div>
-                <h3>Je me connecte sur le site de ma commune pour réaliser une démarche</h3>
+                <h3>Je me connecte sur le site de ma commune pour réaliser une démarche.</h3>
             </div>
             <div class="column text-center">
                 <div style="font-size: 70px">2</div>
-                <h3>En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition</h3>
+                <h3>En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.</h3>
             </div>
             <div class="column text-center">
                 <div style="font-size: 70px">3</div>
@@ -183,24 +188,14 @@
 
 <section class="section-white">
     <div class="container">
-        <h2 class="section__title">Accéder aux données de façon sécurisée</h2>
+        <h2 class="section__title">Seules les administrations sont habilités à utiliser API Particulier</h2>
         <p>
-            API Particulier permet de récupérer des informations certifiées à
-            la source dans un point d'accès unique : l'API (voir aussi
-            <a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a>).
-        </p>
-        <p style="text-align: center">
-            <!-- source: https://docs.google.com/drawings/d/19TvKhsg5SkQyXTA1e9c8CqUf5APg7scTQaO4H-BhDzI/edit?usp=sharing -->
-            <img src="img/shema-api-particulier.svg" width="100%">
-        </p>
-        <p>
-            L'accès aux données est réalisé au travers de protocoles de communications sécurisés et seuls les
-            opérateurs agréés peuvent se connecter à l'API. Conformément aux dispositions de l'article
+            Conformément aux dispositions de l'article
             <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid">
                 L114-8
             </a>
-            du code des relations entre le public et l'administration, seules les administrations sont habilitées à échanger
-            entre elles les informations ou données strictement nécessaires pour traiter une démarche.
+            du <i>code des relations entre le public et l'administration</i>, seules les administrations sont habilitées à échanger
+            entre elles des informations ou données strictement nécessaires pour traiter une démarche.
 
         </p>
         <p>
@@ -220,59 +215,46 @@
 </section>
 
 <section class="section-color">
-    <div class="container multiple_subtitles">
+    <div class="container">
         <h2 class="section__title">Catalogue des données fournies par API Particulier</h2>
-
-
-        <p class="section__subtitle">
-            Direction Générale des Finances Publiques
-        </p>
 
         <div class="row three-equal-column">
             <div class="column text-center">
-                <h4>Avis d'imposition</h4>
-                Contient le revenu fiscal de référence, le nombre de part et les déclarants
+                <h4>Revenu fiscal de référence et le nombre de parts</h4>
+                Contient le revenu fiscal de référence de l'année en court pour le foyer <abbr title="Direction Générale des Finances Publiques">(DGFIP)</abbr>
+            </div>
+            <div class="column text-center">
+                <h4>Déclarants de le fiche d'imposition</h4>
+                Contient les nom, prénoms, date de naissance des déclarants du foyer fiscal <abbr title="Direction Générale des Finances Publiques">(DGFIP)</abbr>
             </div>
             <div class="column text-center">
                 <h4>Adresse fiscale</h4>
-                Contient l'adresse fiscale ainsi que l'adresse structurée et styles coordonnée GPS
+                Contient l'adresse fiscale structurée ainsi que les coordonnées GPS <abbr title="Direction Générale des Finances Publiques">(DGFIP)</abbr>
             </div>
         </div>
 
         <p class="section__subtitle">
-            Caisse d'Allocation Familiales
+            <!-- cheap spacer -->
         </p>
 
         <div class="row three-equal-column">
             <div class="column text-center">
                 <h4>Quotient familial</h4>
-                Contient le quotient familial du mois précédent
+                Contient le quotient familial du mois précédent pour la famille <abbr title="Caisse d'Allocation Familiales">(CAF)</abbr>
             </div>
             <div class="column text-center">
                 <h4>Composition familiale</h4>
-                Contient les parents et les enfants de la famille déclarée à la CAF
+                Contient la liste des parents et des enfants de la famille avec leurs nom, prénoms, date de naissance <abbr title="Caisse d'Allocation Familiales">(CAF)</abbr>
             </div>
             <div class="column text-center">
                 <h4>Adresse</h4>
-                Contient l'adresse déclarée à la CAF
+                Contient l'adresse structurée détenue par la CAF <abbr title="Caisse d'Allocation Familiales">(CAF)</abbr>
             </div>
         </div>
 
-        <p class="section__subtitle">
+        <p class="section__subtitle" style="margin: 3em auto 1em">
             <a href="https://api.gouv.fr/api/api-particulier.html#technique">
-                <button class="button secondary">Je cherche ma donnée dans l'environnement "bac à sable"</button>
-            </a>
-        </p>
-    </div>
-</section>
-
-
-<section class="section-white">
-    <div class="container">
-        <h2 class="section__title">Pour accèder aux données, nous vous attribuons un jeton d'accès secret</h2>
-        <p class="section__subtitle">
-            <a href="https://signup.api.gouv.fr/api-particulier">
-                <button class="button">Obtenir mon jeton</button>
+                <button class="button secondary">Plus d'informations techniques sur la structuration des données</button>
             </a>
         </p>
     </div>
@@ -289,6 +271,17 @@
             Depuis 2017, les habitants de Clamart (92) qui utilise le Portail Famille pour inscrire leurs enfants
             à des activités périscolaires n’ont plus à scanner leur fiche d’imposition. La commune dématérialise
             le calcul de leur quotient familial grâce à la donnée fournie par API Particulier.
+        </p>
+    </div>
+</section>
+
+<section class="section-white">
+    <div class="container">
+        <h2 class="section__title">Pour accèder aux données, nous vous attribuons un jeton d'accès secret</h2>
+        <p class="section__subtitle" style="margin: -1em auto 1em">
+            <a href="https://signup.api.gouv.fr/api-particulier">
+                <button class="button">Obtenir mon jeton</button>
+            </a>
         </p>
     </div>
 </section>

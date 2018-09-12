@@ -34,11 +34,3 @@
     flex-basis: 33%;
     justify-content: flex-start;
 }
-
-.container.multiple_subtitles .section__title {
-    margin: 0 auto 1em;
-}
-
-.container.multiple_subtitles .section__subtitle {
-    margin: 3em auto 1em;
-}
