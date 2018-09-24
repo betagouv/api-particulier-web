@@ -108,7 +108,7 @@
     <div class="hero__container administration">
         <div class="row">
             <div class="column ">
-                <h1>Pas de file d'attente dans ma mairie</h1>
+                <h1>Pas de file d'attente dans ma mairie&nbsp;!</h1>
                 <p>À chaque rentrée vos usagers doivent faire la queue pour faire
                     calculer leurs aides, certains posent même une demi-journée pour faire ces démarches.</p>
                 <p>La bonne nouvelle ?
@@ -133,7 +133,7 @@
                                 <input type="text" name="honeypot">
                             </div>
                             <div style="margin-top: 1em">
-                                <button class="button" type="submit">Faire un test pour mon administration</button>
+                                <button class="button" type="submit">Tester API Particulier</button>
                             </div>
                         </div>
                         <div id="thank-you-message" class="notification success" style="display: none">Merci ! Nous
@@ -157,6 +157,7 @@
         <div class="row">
             <div class="card">
                 <div class="card__content">
+                    <div class="card__meta">Des démarches dématérialisées de bout en bout</div>
                     <p style="font-size: 1.3em; font-style: italic; text-align: center">
                         "En 2014, nos usagers posaient une demi-journée pour effectuer leur démarche en mairie.
                         Aujourd'hui, ils le font en ligne en 5 minutes."
@@ -168,8 +169,9 @@
             </div>
             <div class="card">
                 <div class="card__content">
+                    <div class="card__meta"><b>80%</b> des usagers font les démarches entièrement en ligne</div>
                     <p style="font-size: 1.3em; font-style: italic; text-align: center">
-                        "Maitenant que le traitement est automatisé, j'ai enfin le temps d'aider les usagers en
+                        "Maintenant que le traitement est automatisé, j'ai enfin le temps d'aider les usagers en
                         difficulté, dans certains cas je peux les contacter de manière proactive."
                     </p>
                     <p style="text-align: right;">
@@ -179,8 +181,12 @@
             </div>
             <div class="card">
                 <div class="card__content">
+                    <div class="card__meta"><b>563 178</b> justificatifs papier évités pour le mois de septembre 2018</div>
                     <p style="font-size: 1.3em; text-align: center">
-                        <b>563 178</b> justificatifs papier évités pour le mois de septembre 2018
+                        "Nos usagers n’ont plus à se déplacer avec une tonne de papier."
+                    </p>
+                    <p style="text-align: right;">
+                        <i>- Aurélie, directrices affaires générales, Clamart</i>
                     </p>
                 </div>
             </div>
@@ -193,22 +199,32 @@
 <section class="section-white">
     <div class="container" style="font-size: x-large">
         <p>
-            La lenteur d'une démarche administrative vient du traitement des pièces justificatives. Un usager doit régulièrement se rendre dans sa mairie pour fournir des informations qu'il a déjà transmis à d'autres administrations comme : son revenu fiscal de référence, son quotient familial CAF, la composition de sa famille, etc.
-            Les pièces justificatives rendent les démarches plus complexes, augmentent les risques d'erreur et demandent un traitement manuel de chaque dossier.
-        </p>
+            La lenteur d'une démarche administrative vient du temps imparti au traitement des pièces justificatives. Un
+            usager doit régulièrement se rendre dans sa mairie pour fournir des informations qu'il a déjà transmis à
+            d'autres administrations comme :
+            <ul>
+                <li>son revenu fiscal de référence</li>
+                <li>son quotient familial CAF</li>
+                <li>la composition de sa famille</li>
+                <li>...</li>
+            </ul>
+            Les pièces justificatives rendent les démarches plus complexes, augmentent les risques d'erreur et demandent un
+            traitement manuel de chaque dossier.
         <p>
-            Faire un formulaire en ligne pour soumettre ses pièces justificatives ne résout pas le problème : un agent
+            Faire un formulaire en ligne pour soumettre ces pièces justificatives ne résout pas le problème : un agent
             doit toujours passer du temps pour valider et saisir l'information fournie par l'usager. API Particulier va
-            plus loin et permet de récupérer directement l'information à la source dans les bases de la DGFIP, de la
-            CAF, etc. L'information est certifiée et vous affranchit du besoin de demander et de valider des pièces
-            justificatives. Votre démarche est alors 100% dématérialisée.
+            plus loin et permet de récupérer directement l'information à la source. Cette information est certifiée et
+            vous affranchit du besoin de demander et de valider des pièces justificatives. Votre démarche est alors 100%
+            dématérialisée.
         </p>
         <p>
-            Vous pouvez utiliser API Particulier pour toutes vos démarches : transport, cantine, culture, sport, etc. À partir des informations fiscale, familiale et géographique de vos
+            Vous pouvez utiliser API Particulier pour toutes vos démarches : transport, cantine, culture, sport, etc. À
+            partir des informations fiscale, familiale et géographique de vos
             usagers, vous pouvez calculer automatiquement les montants de vos aides.
         </p>
         <p>
-            Nous voudrions banir l'emploi de pièces justificatives dans votre administration. Cela dit, si vous avez la moindre question avant de
+            Nous voudrions banir l'emploi de pièces justificatives dans votre administration. Si vous avez la moindre
+            question avant de
             commencer,
             <a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr%2Fadministration">n'hésitez
                 pas à nous contacter</a>.
@@ -220,7 +236,7 @@
     <div class="container">
         <p class="section__subtitle">
             <button class="button" onclick="document.getElementById('gform-input-name').focus()">
-                Faire un test pour mon administration
+                Tester API Particulier
             </button>
         </p>
     </div>
