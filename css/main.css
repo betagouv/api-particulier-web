@@ -1,10 +1,9 @@
 .hero {
-    background: linear-gradient(to top, #fef7df 47%, #d7edff 47%);
+    background: #fff;
 }
 
-.hero h1,
-.hero p {
-    color: #000;
+.hero {
+    color: #26353f;
 }
 
 .hero p {
@@ -20,10 +19,6 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-}
-
-.hero .illustration {
-    width: 50%;
 }
 
 .city-illustration {
