@@ -1,0 +1,288 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>API Particulier</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/template.data.gouv.fr@1.1.4/dist/style/main.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Search Engine -->
+    <meta name="description" content="Vos démarches sans pièces justificatives">
+    <meta name="image" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="API Particulier">
+    <meta itemprop="description" content="Vos démarches sans pièces justificatives">
+    <meta itemprop="image" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="API Particulier">
+    <meta name="twitter:description" content="Vos démarches sans pièces justificatives">
+    <meta name="twitter:site" content="@APIGouv">
+    <meta name="twitter:creator" content="APIGouv">
+    <meta name="twitter:image:src" content="https://particulier.api.gouv.fr/img/preview.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="API Particulier">
+    <meta name="og:description" content="Vos démarches sans pièces justificatives">
+    <meta name="og:image" content="https://particulier.api.gouv.fr/img/preview_fb.jpg">
+    <meta name="og:url" content="https://particulier.api.gouv.fr/">
+    <meta name="og:site_name" content="API Particulier">
+    <meta name="og:locale" content="fr_FR">
+    <meta name="og:type" content="website">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+</head>
+<body>
+<svg aria-hidden="true" focusable="false" style="display:none">
+    <defs>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-verified-user" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-spellcheck" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12.45 16h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64l1.14 3zm-6.02-5L8.5 5.48 10.57 11H6.43zm15.16.59l-8.09 8.09L9.83 16l-1.41 1.41 5.09 5.09L23 13l-1.41-1.41z"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="material-touch-app" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="a" d="M0 0h24v24H0V0z"/>
+            </defs>
+            <clipPath id="b">
+                <use xlink:href="#a" overflow="visible"/>
+            </clipPath>
+            <path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"
+                  clip-path="url(#b)"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="twitter" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.003 6.695c-1.102.492-2.291.82-3.533.966a6.185 6.185 0 0 0 2.706-3.404 12.404 12.404 0 0 1-3.908 1.495 6.154 6.154 0 0 0-4.495-1.94 6.153 6.153 0 0 0-5.994 7.553A17.468 17.468 0 0 1 3.093 4.932a6.15 6.15 0 0 0-.831 3.094 6.147 6.147 0 0 0 2.736 5.122 6.16 6.16 0 0 1-2.789-.768v.076a6.154 6.154 0 0 0 4.94 6.034 6.149 6.149 0 0 1-2.783.106 6.177 6.177 0 0 0 5.748 4.277 12.347 12.347 0 0 1-9.117 2.549 17.4 17.4 0 0 0 9.44 2.766c11.32 0 17.513-9.381 17.513-17.514 0-.269-.005-.533-.017-.796a12.405 12.405 0 0 0 3.07-3.182v-.001z"
+                  fill-rule="nonzero"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="github" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 1.371c-8.284 0-15 6.715-15 15 0 6.627 4.298 12.25 10.258 14.233.75.138 1.026-.326 1.026-.722 0-.357-.014-1.54-.021-2.793-4.174.907-5.054-1.77-5.054-1.77-.682-1.733-1.665-2.195-1.665-2.195-1.361-.931.103-.912.103-.912 1.506.106 2.299 1.546 2.299 1.546 1.338 2.293 3.509 1.63 4.365 1.247.134-.969.523-1.631.952-2.006-3.331-.379-6.834-1.666-6.834-7.413 0-1.638.586-2.976 1.546-4.027-.156-.378-.669-1.903.145-3.969 0 0 1.26-.403 4.126 1.537a14.453 14.453 0 0 1 3.755-.505c1.274.006 2.558.173 3.757.505 2.864-1.94 4.121-1.537 4.121-1.537.816 2.066.303 3.591.147 3.969.962 1.05 1.544 2.389 1.544 4.027 0 5.761-3.509 7.029-6.849 7.401.538.466 1.017 1.379 1.017 2.778 0 2.007-.018 3.623-.018 4.117 0 .399.27.867 1.03.72C26.707 28.616 31 22.996 31 16.371c0-8.285-6.716-15-15-15z"
+                  fill-rule="nonzero"/>
+        </symbol>
+        <symbol viewBox="0 0 32 32" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                stroke-miterlimit="1.414" id="envelope" xmlns="http://www.w3.org/2000/svg">
+            <g fill-rule="nonzero">
+                <path d="M30.1 5.419c-9.355-.002-18.733-.005-28.1-.005A1.06 1.06 0 0 0 .975 6.439v19.122A1.06 1.06 0 0 0 2 26.586h28a1.061 1.061 0 0 0 1.025-1.025V6.439a1.056 1.056 0 0 0-.925-1.02zM3.025 7.464h25.95v17.072H3.025V7.464z"/>
+                <path d="M30.06 9.513c.933.098 1.382 1.395.393 1.945L16.54 18.287c-.438.188-.479.178-.893 0L1.733 11.458c-1.743-.968-.065-2.254.894-1.842l13.466 6.61 13.562-6.651c.3-.094.312-.062.405-.062z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+<header class="navbar" role="navigation">
+    <div class="navbar__container">
+        <a class="navbar__home" href="index.html">
+            <img class="navbar__logo" src="img/logo-marianne.svg"
+                 alt="particulier.beta.gouv.fr"/><span class="navbar__domain">particulier</span><img
+                src="img/pointapigouvfr.svg" class="navbar__gouvfr" alt=".api.gouv.fr"/>
+        </a>
+
+        <nav>
+            <ul class="nav__links">
+                <li class="nav__item"><a href="https://api.gouv.fr/apropos">À propos</a></li>
+                <li class="nav__item"><a
+                        href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Nous
+                    contacter</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero" role="banner">
+    <div class="hero__container administration">
+        <div class="row">
+            <div class="column ">
+                <h1>Pas de file d'attente dans ma mairie&nbsp;!</h1>
+                <p>À chaque rentrée vos usagers doivent faire la queue pour faire
+                    calculer leurs aides, certains posent même une demi-journée pour faire ces démarches.</p>
+                <p>La bonne nouvelle ?
+                    <a style="color: #1631d5;" href="https://particulier.api.gouv.fr/FAQ.html">API Particulier résout ce
+                        problème</a>.
+                    <b> API Particulier est un service gratuit fourni par la <abbr
+                            title="Direction interministérielle du numérique et du système d'information et de communication de l'État">DINSIC</abbr>.</b>
+                </p>
+                <div>
+                    <form id="gform"
+                          action="https://script.google.com/macros/s/AKfycbzSuEezvl9QSpGbtOsP_F__g_A-vua8KgWrIK9K/exec"
+                          method="post" style="margin: 0">
+                        <div id="form-elements">
+                            <div style="margin-top: 0.5em">
+                                <input id="gform-input-name" type="text" placeholder="Mon administration (ex : Maire de Clamart)" name="name">
+                            </div>
+                            <div style="margin-top: 0.5em">
+                                <input type="email" placeholder="Mon adresse email (ex : claude@ville-clamart.fr)"
+                                       name="email">
+                            </div>
+                            <div class="honeypot">
+                                <input type="text" name="honeypot">
+                            </div>
+                            <div style="margin-top: 1em">
+                                <button class="button" type="submit">Tester API Particulier</button>
+                            </div>
+                        </div>
+                        <div id="thank-you-message" class="notification success" style="display: none">Merci ! Nous
+                            revenons
+                            vers vous au plus vite.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="column illustration">
+                <img src="img/file-d-attente.png" alt="File d'attente">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="">
+    <div class="container">
+        <h2 class="section__title"><a href="#">37 administrations</a> ont déjà opté pour API Particulier avec des
+            résultats comme :</h2>
+        <div class="row">
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__meta">Des démarches dématérialisées de bout en bout</div>
+                    <p style="font-size: 1.3em; font-style: italic; text-align: center">
+                        "En 2014, nos usagers posaient une demi-journée pour effectuer leur démarche en mairie.
+                        Aujourd'hui, ils le font en ligne en 5 minutes."
+                    </p>
+                    <p style="text-align: right;">
+                        <i>- Simon Pierre, DGA action à la population, Clamart</i>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__meta"><b>80%</b> des usagers font les démarches entièrement en ligne</div>
+                    <p style="font-size: 1.3em; font-style: italic; text-align: center">
+                        "Maintenant que le traitement est automatisé, j'ai enfin le temps d'aider les usagers en
+                        difficulté, dans certains cas je peux les contacter de manière proactive."
+                    </p>
+                    <p style="text-align: right;">
+                        <i>- Aurélie, directrices affaires générales, Clamart</i>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__meta"><b>563 178</b> justificatifs papier évités pour le mois de septembre 2018</div>
+                    <p style="font-size: 1.3em; text-align: center">
+                        "Nos usagers n’ont plus à se déplacer avec une tonne de papier."
+                    </p>
+                    <p style="text-align: right;">
+                        <i>- Aurélie, directrices affaires générales, Clamart</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <p class="section__subtitle"></p>
+    </div>
+</section>
+
+<section class="section-white">
+    <div class="container" style="font-size: x-large">
+        <p>
+            La lenteur d'une démarche administrative vient du temps imparti au traitement des pièces justificatives. Un
+            usager doit régulièrement se rendre dans sa mairie pour fournir des informations qu'il a déjà transmis à
+            d'autres administrations comme :
+            <ul>
+                <li>son revenu fiscal de référence</li>
+                <li>son quotient familial CAF</li>
+                <li>la composition de sa famille</li>
+                <li>...</li>
+            </ul>
+            Les pièces justificatives rendent les démarches plus complexes, augmentent les risques d'erreur et demandent un
+            traitement manuel de chaque dossier.
+        <p>
+            Faire un formulaire en ligne pour soumettre ces pièces justificatives ne résout pas le problème : un agent
+            doit toujours passer du temps pour valider et saisir l'information fournie par l'usager. API Particulier va
+            plus loin et permet de récupérer directement l'information à la source. Cette information est certifiée et
+            vous affranchit du besoin de demander et de valider des pièces justificatives. Votre démarche est alors 100%
+            dématérialisée.
+        </p>
+        <p>
+            Vous pouvez utiliser API Particulier pour toutes vos démarches : transport, cantine, culture, sport, etc. À
+            partir des informations fiscale, familiale et géographique de vos
+            usagers, vous pouvez calculer automatiquement les montants de vos aides.
+        </p>
+        <p>
+            Nous voudrions banir l'emploi de pièces justificatives dans votre administration. Si vous avez la moindre
+            question avant de
+            commencer,
+            <a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr%2Fadministration">n'hésitez
+                pas à nous contacter</a>.
+        </p>
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <p class="section__subtitle">
+            <button class="button" onclick="document.getElementById('gform-input-name').focus()">
+                Tester API Particulier
+            </button>
+        </p>
+    </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer__logo">
+            <img src="img/api-gouv-fr-logo.svg" alt="Logo api.gouv.fr">
+            <ul class="footer__social">
+                <li><a href="https://twitter.com/APIGouv" title="Twitter">
+                    <svg class="icon icon-twitter">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a></li>
+                <li><a href="https://github.com/orgs/betagouv/teams/api-particulier" title="Github">
+                    <svg class="icon icon-github">
+                        <use xlink:href="#github"></use>
+                    </svg>
+                </a></li>
+                <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr"
+                       title="Nous écrire un mail">
+                    <svg class="icon icon-mail">
+                        <use xlink:href="#envelope"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <ul class="footer__links">
+            <li><h2>particulier.api.gouv.fr</h2></li>
+            <li><a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a></li>
+            <li><a href="https://particulier.api.gouv.fr/FAQ.html">FAQ</a></li>
+            <li><a href="https://status.particulier.api.gouv.fr">Status des API</a></li>
+            <li><a href="https://api.gouv.fr/apropos#mentions-légales">Mentions légales</a></li>
+            <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Contactez-nous</a>
+            </li>
+        </ul>
+        <ul class='footer__links'>
+            <li><h2>api.gouv.fr</h2></li>
+            <li><a href="http://beta.gouv.fr/" rel="noopener" target="_blank">Une réalisation de beta.gouv.fr</a></li>
+            <li><a href="http://modernisation.gouv.fr/" rel="noopener" target="_blank">Une mission de la DINSIC</a></li>
+            <li><a href="http://etatplateforme.modernisation.gouv.fr/" target="_blank">Un site de l'État plateforme</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+</body>
+</html>

@@ -19,6 +19,10 @@
     margin: 0 auto;
 }
 
+.hero__container.administration {
+    width: 90%;
+}
+
 .hero__container > .row {
     width: 100%;
     align-items: center;
@@ -32,4 +36,12 @@
 .row.three-equal-column .column {
     flex-basis: 33%;
     justify-content: flex-start;
+}
+
+.row + .row {
+    margin-top: 2em;
+}
+
+form .honeypot {
+    display: none;
 }
