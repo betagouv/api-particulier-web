@@ -26,11 +26,11 @@ info:
 
     Voici la liste des tokens d'API de tests. Chacun donne accès à un *scope* différent.
 
-    | Source | Scope                     | Token      |
-    |--------|---------------------------|------------|
-    | /impots| DGFIP - Avis d'imposition | test-token |
-    | /caf   | CNAF - Quotient familial  | test-token |
-    | /caf   | CNAF - attestation droits | test-token |
+    | Source | Scope                     | Token                            |
+    |--------|---------------------------|----------------------------------|
+    | /impots| DGFIP - Avis d'imposition | 83c68bf0b6013c4daf3f8213f7212aa5 |
+    | /caf   | CNAF - Quotient familial  | 73af98c480aa3abfd38830ec5c5354d8 |
+    | /caf   | CNAF - attestation droits | 3841b13fa8032ed3c31d160d3437a76a |
 
      **Important :** la taille du jeu de données retournées dépend du *scope* de la clé d'API utilisée. Certaines clés n'autorisent qu'un nombre réduit de donnée. Ainsi, suivant la clé utilisée, une même requête peut retourner des résultats différents. En effet, les disposition de l'article [L144-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) n'autorise que l'échange des informations **strictement nécessaire** pour traiter une démarche. En conséquence, pendant vos tests, assurez-vous d'utiliser la clé d'API associé au *scope* correspondant aux données auxquelles vous aurez accès d'un point de vue légal.
 
@@ -47,7 +47,7 @@ info:
      - remplacez la clé d'API de test par la clé d'API obtenue suite à votre [demande d'autorisation](http://signup.api.gouv.fr)
 
   version: 1.0.0
-host: "particulier-test.infra.beta.gouv.fr"
+host: "particulier-test.api.gouv.fr"
 basePath: /api
 schemes:
 - https
@@ -64,7 +64,7 @@ paths:
         in: query
         description: token à introspecter
         type: string
-        default: test-token
+        default: 83c68bf0b6013c4daf3f8213f7212aa5
       tags:
       - Token
       responses:
@@ -101,7 +101,7 @@ paths:
         description: Token d'identification de l'API
         required: true
         type: string
-        default: test-token
+        default: 83c68bf0b6013c4daf3f8213f7212aa5
       - name: X-User
         in: header
         description: Utilisateur final de l'API
@@ -153,7 +153,7 @@ paths:
         description: Token d'identification de l'API
         required: true
         type: string
-        default: test-token
+        default: 83c68bf0b6013c4daf3f8213f7212aa5
       - name: X-User
         in: header
         description: Utilisateur final de l'API
@@ -206,7 +206,7 @@ paths:
         description: Token d'identification de l'API
         required: true
         type: string
-        default: test-token
+        default: 3841b13fa8032ed3c31d160d3437a76a
       - name: X-User
         in: header
         description: Utilisateur final de l'API
