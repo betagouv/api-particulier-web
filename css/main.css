@@ -14,6 +14,10 @@
     width: 50%;
 }
 
+.hero .illustration img {
+    width: 100%;
+}
+
 .hero__container {
     width: 80%;
     margin: 0 auto;

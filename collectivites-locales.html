@@ -8,7 +8,7 @@
 
     <title>API Particulier - Collectivités locales</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/template.data.gouv.fr@1.1.4/dist/style/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/template.data.gouv.fr@1.1.6/dist/style/main.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Search Engine -->
@@ -111,7 +111,7 @@
 
         <nav>
             <ul class="nav__links">
-                <li class="nav__item"><a href="https://particulier.api.gouv.fr/collectivites-locales.html">Collectivités locales</a></li>
+                <li class="nav__item"><a href="collectivites-locales.html">Collectivités locales</a></li>
                 <li class="nav__item"><a href="https://api.gouv.fr/apropos">À propos</a></li>
                 <li class="nav__item"><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Nous contacter</a></li>
             </ul>
@@ -127,8 +127,7 @@
                 <p>À chaque rentrée vos usagers doivent faire la queue pour faire
                     calculer leurs aides, certains posent même une demi-journée pour faire ces démarches.</p>
                 <p>La bonne nouvelle ?
-                    <a style="color: #1631d5;" href="https://particulier.api.gouv.fr/FAQ.html">API Particulier résout ce
-                        problème</a>.
+                    <a style="color: #1631d5;" href="FAQ.html">API Particulier résout ce problème</a>.
                     <b> API Particulier est un service gratuit fourni par la <abbr
                             title="Direction interministérielle du numérique et du système d'information et de communication de l'État">DINSIC</abbr>.</b>
                 </p>
@@ -138,11 +137,11 @@
                           method="post" style="margin: 0">
                         <div id="form-elements">
                             <div style="margin-top: 0.5em">
-                                <input id="gform-input-name" type="text" placeholder="Mon administration (ex : Maire de Clamart)" name="name">
+                                <input id="gform-input-name" type="text" placeholder="Mon administration (ex : Maire de Clamart)" name="name" required>
                             </div>
                             <div style="margin-top: 0.5em">
                                 <input type="email" placeholder="Mon adresse email (ex : claude@ville-clamart.fr)"
-                                       name="email">
+                                       name="email" required>
                             </div>
                             <div class="honeypot">
                                 <input type="text" name="honeypot">
@@ -165,7 +164,7 @@
     </div>
 </div>
 
-<section class="">
+<section class="section">
     <div class="container">
         <h2 class="section__title"><a href="#">37 administrations</a> ont déjà opté pour API Particulier avec des
             résultats comme :</h2>
@@ -211,7 +210,7 @@
     </div>
 </section>
 
-<section class="section-white">
+<section class="section section-white">
     <div class="container" style="font-size: x-large">
         <p>
             Le temps de traitement d'une démarche administrative est lié au temps de traitement des pièces justificatives. Un
@@ -254,7 +253,7 @@
     </div>
 </section>
 
-<section class="">
+<section class="section">
     <div class="container">
         <p class="section__subtitle">
             <button class="button" onclick="document.getElementById('gform-input-name').focus()">
@@ -279,8 +278,7 @@
                         <use xlink:href="#github"></use>
                     </svg>
                 </a></li>
-                <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr"
-                       title="Nous écrire un mail">
+                <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr" title="Nous écrire un mail">
                     <svg class="icon icon-mail">
                         <use xlink:href="#envelope"></use>
                     </svg>
@@ -290,18 +288,17 @@
         <ul class="footer__links">
             <li><h2>particulier.api.gouv.fr</h2></li>
             <li><a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a></li>
-            <li><a href="https://particulier.api.gouv.fr/FAQ.html">FAQ</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="https://status.particulier.api.gouv.fr">Status des API</a></li>
+            <li><a href="statistiques.html">Statistiques d'usage</a></li>
             <li><a href="https://api.gouv.fr/apropos#mentions-légales">Mentions légales</a></li>
-            <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Contactez-nous</a>
-            </li>
+            <li><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Contactez-nous</a></li>
         </ul>
         <ul class='footer__links'>
             <li><h2>api.gouv.fr</h2></li>
             <li><a href="http://beta.gouv.fr/" rel="noopener" target="_blank">Une réalisation de beta.gouv.fr</a></li>
             <li><a href="http://modernisation.gouv.fr/" rel="noopener" target="_blank">Une mission de la DINSIC</a></li>
-            <li><a href="http://etatplateforme.modernisation.gouv.fr/" target="_blank">Un site de l'État plateforme</a>
-            </li>
+            <li><a href="http://etatplateforme.modernisation.gouv.fr/" target="_blank">Un site de l'État plateforme</a></li>
         </ul>
     </div>
 </footer>
