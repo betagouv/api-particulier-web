@@ -29,8 +29,9 @@ info:
     | Source | Scope                     | Token                            |
     |--------|---------------------------|----------------------------------|
     | /impots| DGFIP - Avis d'imposition | 83c68bf0b6013c4daf3f8213f7212aa5 |
+    | /impots| DGFIP - Adresse           | 02013fe1b5221dd7d914e4406fb88891 |
     | /caf   | CNAF - Quotient familial  | 73af98c480aa3abfd38830ec5c5354d8 |
-    | /caf   | CNAF - attestation droits | 3841b13fa8032ed3c31d160d3437a76a |
+    | /caf   | CNAF - Attestation droits | 3841b13fa8032ed3c31d160d3437a76a |
 
      **Important :** la taille du jeu de données retournées dépend du *scope* de la clé d'API utilisée. Certaines clés n'autorisent qu'un nombre réduit de donnée. Ainsi, suivant la clé utilisée, une même requête peut retourner des résultats différents. En effet, les disposition de l'article [L144-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) n'autorise que l'échange des informations **strictement nécessaire** pour traiter une démarche. En conséquence, pendant vos tests, assurez-vous d'utiliser la clé d'API associé au *scope* correspondant aux données auxquelles vous aurez accès d'un point de vue légal.
 
@@ -127,59 +128,6 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-
-  /impots/adress:
-    get:
-      summary: Service pour récupérer l'adresse du foyer fiscal
-      description: |
-        permet de récupérer les possibles localisations du foyer fiscal
-        enrichies grace à la BAN
-      parameters:
-      - name: numeroFiscal
-        in: query
-        description: Numéro fiscal
-        required: true
-        type: number
-        format: string
-        default: "1562456789521"
-      - name: referenceAvis
-        in: query
-        description: Référence d'avis
-        required: true
-        type: string
-        default: "1512456789521"
-      - name: X-API-Key
-        in: header
-        description: Token d'identification de l'API
-        required: true
-        type: string
-        default: 83c68bf0b6013c4daf3f8213f7212aa5
-      - name: X-User
-        in: header
-        description: Utilisateur final de l'API
-        required: false
-        type: string
-        default: "Badul Badul"
-      tags:
-      - Impots
-      responses:
-        '200':
-          description: A declaration
-          schema:
-            $ref: '#/definitions/SvairAdresses'
-        '401':
-          description: Le token ne vous permet pas d'accéder à l'API
-          schema:
-            $ref: '#/definitions/Error'
-        '404':
-          description: 'Les paramètres fournis sont incorrects ou ne correspondent pas à un avis'
-          schema:
-            $ref: '#/definitions/Error'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-
   /caf/famille:
     get:
       summary: Informations concernant la famille
