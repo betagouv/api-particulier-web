@@ -209,7 +209,7 @@ definitions:
         description: 'Date de recouvrement; format: JJ/MM/AAA'
       dateEtablissement:
         type: string
-        description: 'Date de recouvrement; format: JJ/MM/AAA'
+        description: 'Date d’établissement; format: JJ/MM/AAA'
       nombreParts:
         type: integer
         description: 'Nombre de parts'
@@ -230,7 +230,7 @@ definitions:
         description: 'Revenu net avant correction'
       montantImpot:
         type: integer
-        description: 'Montant des impots'
+        description: 'Total de l'impôt sur le revenu net'
       revenuFiscalReference:
         type: integer
         description: 'Revenu fiscal de référence'
