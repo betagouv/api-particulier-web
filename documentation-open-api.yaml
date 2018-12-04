@@ -55,28 +55,6 @@ schemes:
 produces:
 - application/json
 paths:
-  /introspect:
-    get:
-      summary: Introspection du token donné en paramètre
-      description: |
-        Cet endpoint permet de découvrir les informations correspondant à un token donné
-      parameters:
-      - name: token
-        in: query
-        description: token à introspecter
-        type: string
-        default: 83c68bf0b6013c4daf3f8213f7212aa5
-      tags:
-      - Token
-      responses:
-        '200':
-          description: l'introspection du token
-          schema:
-            $ref: '#/definitions/Introspection'
-        '404':
-          description: 'Token not found'
-          schema:
-            $ref: '#/definitions/Error'
   /impots/svair:
     get:
       summary: Service de vérification de l'avis d'impôt sur le revenu
@@ -180,7 +158,80 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-
+  /introspect:
+    get:
+      summary: Introspection du token donné en paramètre
+      description: |
+        Cet endpoint permet de découvrir les informations correspondant à un token donné
+      parameters:
+      - name: X-API-Key
+        in: header
+        description: Token d'identification de l'API
+        required: true
+        type: string
+        default: 83c68bf0b6013c4daf3f8213f7212aa5
+      tags:
+      - Token
+      responses:
+        '200':
+          description: l'introspection du token
+          schema:
+            $ref: '#/definitions/Introspection'
+        '404':
+          description: 'Token not found'
+          schema:
+            $ref: '#/definitions/Error'
+  /ping:
+    get:
+      summary: Status des serveurs applicatifs API Particulier
+      description: |
+        Ce endpoint permet de connaitre l'état du serveur API Particulier.
+        Si le résultat est autre qu'un code HTTP 200, le serveur rencontre un problème.
+        On peut alors considérer que les résultat des autres endpoints seront perturbés.
+      tags:
+      - Ping
+      responses:
+        '200':
+          description: pong
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
+  /impots/ping:
+    get:
+      summary: Status des serveurs de la DGFIP
+      description: |
+        Ce endpoint permet de connaitre l'état du serveur de la DGFIP sur lequel s'appuie API Particulier pour vous restituer les données impôts.
+        Si le résultat est autre qu'un code HTTP 200, le serveur de la DGFIP rencontre un problème.
+        On peut alors considérer que les résultat du endpoint /impots/svair seront perturbés.
+      tags:
+      - Ping
+      responses:
+        '200':
+          description: pong
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
+  /caf/ping:
+    get:
+      summary: Status des serveurs de la CAF
+      description: |
+        Ce endpoint permet de connaitre l'état du serveur de la CAF sur lequel s'appuie API Particulier pour vous restituer les données famille.
+        Si le résultat est autre qu'un code HTTP 200, le serveur de la CAF rencontre un problème.
+        On peut alors considérer que les résultat du endpoint /caf/famille seront perturbés.
+      tags:
+      - Ping
+      responses:
+        '200':
+          description: pong
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
 
 definitions:
   Introspection:
