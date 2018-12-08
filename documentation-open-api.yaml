@@ -262,7 +262,7 @@ definitions:
         type: string
         description: 'Date de recouvrement; format: JJ/MM/AAA'
       nombreParts:
-        type: integer
+        type: number
         description: 'Nombre de parts'
       situationFamille:
         type: string
