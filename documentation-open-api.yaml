@@ -68,13 +68,13 @@ paths:
         required: true
         type: number
         format: string
-        default: "1562456789521"
+        default: "1702599999001"
       - name: referenceAvis
         in: query
         description: Référence d'avis
         required: true
         type: string
-        default: "1512456789521"
+        default: "1702599999001"
       - name: X-API-Key
         in: header
         description: Token d'identification de l'API
@@ -191,13 +191,11 @@ paths:
       tags:
       - Ping
       responses:
-        '200':
-          description: pong
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: pong
+        200:
+          description: 'pong'
+          schema:
+            type: string
+            example: pong
   /impots/ping:
     get:
       summary: Status des serveurs de la DGFIP
@@ -210,11 +208,9 @@ paths:
       responses:
         '200':
           description: pong
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: pong
+          schema:
+            type: string
+            example: pong
   /caf/ping:
     get:
       summary: Status des serveurs de la CAF
@@ -227,11 +223,9 @@ paths:
       responses:
         '200':
           description: pong
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: pong
+          schema:
+            type: string
+            example: pong
 
 definitions:
   Introspection:
@@ -291,55 +285,12 @@ definitions:
       anneeRevenus:
         type: string
         description: 'Année format: AAAA'
-
-  SvairAdresses:
-    type: object
-    properties:
-      declarant1:
-        $ref: '#/definitions/Declarant'
-      foyerFiscal:
-        $ref: '#/definitions/FoyerFiscal'
-      declarant2:
-        $ref: '#/definitions/Declarant'
-      adresses:
-        type: array
-        items:
-          $ref: '#/definitions/Address'
-  Address:
-    type: object
-    properties:
-      adresse:
-        type: object
-        properties:
-          name:
-            type: string
-          city:
-            type: string
-          housenumber:
-            type: string
-          label:
-            type: string
-          context:
-            type: string
-          citycode:
-            type: string
-          type:
-            type: string
-          score:
-            type: number
-            format: double
-          postcode:
-            type: string
-      geometry:
-        type: object
-        properties:
-          type:
-            type: string
-          coordinates:
-            type: array
-            items:
-              type: number
-              format: double
+      erreurCorrectif:
+        type: string
+        description: 'Si l''avis contrôlé ne correspond pas à la situation la plus récente pour l''usager, ce champ prend la valeur "Ce document ne correspond pas à la situation la plus récente pour cet usager". Sinon, le champ est absent de la réponse.'
+      situationPartielle:
+        type: string
+        description: 'Si l''avis contrôlé correspond à une situation partielle pour l''usager, exemple d''un usager qui a du faire 2 déclarations sur une même année fiscale, ce champ prend la valeur "(*) Situation  2017  partielle". Sinon, le champ est absent de la réponse.'
 
   Declarant:
     type: object
