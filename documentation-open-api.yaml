@@ -290,7 +290,7 @@ definitions:
         description: 'Si l''avis contrôlé ne correspond pas à la situation la plus récente pour l''usager, ce champ prend la valeur "Ce document ne correspond pas à la situation la plus récente pour cet usager". Sinon, le champ est absent de la réponse.'
       situationPartielle:
         type: string
-        description: 'Si l''avis contrôlé correspond à une situation partielle pour l''usager, exemple d''un usager qui a du faire 2 déclarations sur une même année fiscale, ce champ prend la valeur "(*) Situation  2017  partielle". Sinon, le champ est absent de la réponse.'
+        description: 'Si l''avis contrôlé correspond à une situation partielle pour l''usager, exemple d''un usager qui a du faire 2 déclarations sur une même année fiscale, ce champ prend la valeur "(*) Situation  {anneeRevenus}  partielle". Sinon, le champ est absent de la réponse.'
 
   Declarant:
     type: object
