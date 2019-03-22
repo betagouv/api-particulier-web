@@ -112,80 +112,52 @@
         <nav>
             <ul class="nav__links">
                 <li class="nav__item"><a href="collectivites-locales.html">Collectivités locales</a></li>
-                <li class="nav__item"><a href="https://api.gouv.fr/apropos">À propos</a></li>
+                <li class="nav__item"><a href="FAQ.html">FAQ</a></li>
                 <li class="nav__item"><a href="mailto:contact@particulier.api.gouv.fr?subject=Contact%20via%20particulier.api.gouv.fr">Nous contacter</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="section">
+<section class="section section-white">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-sm-9">
-                <h2 class="section-heading">
-                    Comprendre la différence avec FranceConnect
-                </h2>
+        <h2 class="section__title">API Particulier pour les usagers, c'est :</h2>
 
-                <p class="lead">
-                    API Particulier et FranceConnect sont deux systèmes
-                    indépendants mais complémentaires.
-                </p>
-
-                <table class="table">
-                    <tr>
-                        <th></th>
-                        <th>
-                            FranceConnect
-                        </th>
-                        <th>
-                            API Particulier
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Nature
-                        </th>
-                        <td>
-                            Fournisseur d’Identité et tiers de confiance
-                        </td>
-                        <td>
-                            Fournisseur de Données
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Identification
-                        </th>
-                        <td>
-                            Citoyen et Fournisseur de Service
-                        </td>
-                        <td>
-                            Fournisseur de Service
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Type de donnée
-                        </th>
-                        <td>
-                            liée à la personne
-                        </td>
-                        <td>
-                            liée à la personne, au foyer familial, aux parents et aux enfants
-                        </td>
-                    </tr>
-                </table>
-
-                <p class="lead">
-                    API Particulier et FranceConnect peuvent être utilisés
-                    seul ou conjointement.
-                </p>
+        <div class="row three-equal-column">
+            <div class="column text-center">
+                <div style="font-size: 70px">1</div>
+                <h3>Je me connecte sur le site de ma commune pour réaliser une démarche.</h3>
             </div>
-            <div class="col-lg-3 col-lg-offset-2 col-sm-3">
-                <img class="img-responsive" src="img/logo-fc.png" alt="">
+            <div class="column text-center">
+                <div style="font-size: 70px">2</div>
+                <h3>En lieu de justificatif de revenu, je saisis mon numéro fiscal et mon numéro d’avis d’imposition.</h3>
+            </div>
+            <div class="column text-center">
+                <div style="font-size: 70px">3</div>
+                <h3>Ma commune récupère immédiatement mon revenu fiscal de référence et je n’ai plus rien à faire !</h3>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section__title">Fonctionnement de API Particulier</h2>
+        <p>
+            API Particulier est, comme son nom l'indique, une API (voir <a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a>).
+            API Particulier permet de récupérer les informations certifiées à la source d'un usager à travers un point d'accès unique.
+        </p>
+        <p>
+            Voici un exemple classique d'utilisation d'API Particulier :
+        </p>
+        <p style="text-align: center">
+            <!-- source: https://docs.google.com/drawings/d/1tLfTfsFqMVjtvkKEKw_4DW2RfGE36D0EVSYsGvyp6ME/edit?usp=sharing -->
+            <img src="img/shema-api-particulier.svg" width="100%">
+        </p>
+        <p>
+            L'accès aux données est réalisé au travers de protocoles de communications sécurisés et seuls les
+            opérateurs agréés peuvent se connecter à l'API.
+        </p>
     </div>
 </section>
 
@@ -214,7 +186,6 @@
         <ul class="footer__links">
             <li><h2>particulier.api.gouv.fr</h2></li>
             <li><a href="https://api.gouv.fr/apropos#quest-ce-quune-api">Qu'est ce qu'une API ?</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="https://status.particulier.api.gouv.fr">Status des API</a></li>
             <li><a href="statistiques.html">Statistiques d'usage</a></li>
             <li><a href="https://api.gouv.fr/apropos#mentions-légales">Mentions légales</a></li>
