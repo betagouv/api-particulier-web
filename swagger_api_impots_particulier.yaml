@@ -155,7 +155,7 @@ paths:
           consentement de l'usager) précédé du champ "Bearer:"
         required: true
         type: string
-        default: "Bearer: 83c68bf0b6013c4daf3f8213f7212aa5"
+        default: "Bearer: 9af033eb295d0fe113988d29a26527f920114973b3a1ca7bdb44768fd0c73937"
       tags:
       - Impôt sur le revenu (IR)
       responses:
