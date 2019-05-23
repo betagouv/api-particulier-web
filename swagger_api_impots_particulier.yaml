@@ -108,7 +108,7 @@ info:
     de données auprès du mock FD DGFiP. Vous pouvez l'interroger à l'adresse
     suivante :  https://data-provider-example-test.herokuapp.com/
 
-    L'ensemble des cas de tests disponibles sur le mock sont disponibles à l'adresse suivante : http://...
+    L'ensemble des cas de tests disponibles sur le mock sont disponibles à l'adresse suivante : https://github.com/france-connect/data-provider-example/blob/master/database.csv
 
     Vous pouvez également installer une instance locale en téléchargeant les
     sources : https://github.com/france-connect/data-provider-example
