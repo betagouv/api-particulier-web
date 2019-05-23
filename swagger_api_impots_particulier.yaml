@@ -10,7 +10,7 @@ info:
     téléservice FranceConnecté.
 
 
-    Pour utiliser l'API Impôt Particulier en production (xxx.api.gouv.fr), vous
+    Pour utiliser l'API Impôt Particulier en production, vous
     devez initier une demande de raccordement sur l'espace dédié :
     (https://signup-staging.api.gouv.fr/dgfip).
 
@@ -106,12 +106,12 @@ info:
     Cette intégration vous permet donc de jouer l'ensemble de la cinématique
     FranceConnect depuis l'authentification d'un usager jusqu'à la récupération
     de données auprès du mock FD DGFiP. Vous pouvez l'interroger à l'adresse
-    suivante : http://...
+    suivante :  https://data-provider-example-test.herokuapp.com/
 
     L'ensemble des cas de tests disponibles sur le mock sont disponibles à l'adresse suivante : http://...
 
     Vous pouvez également installer une instance locale en téléchargeant les
-    sources : http://github...
+    sources : https://github.com/france-connect/data-provider-example
 
 
     ### Ajout de cas de tests sur le mock
