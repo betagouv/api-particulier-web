@@ -287,7 +287,7 @@ definitions:
         description: 'Année format: AAAA'
       erreurCorrectif:
         type: string
-        description: 'S''il existe un correctif plus récent que l''avis contrôlé, ce champ prend la valeur "Ce document ne correspond pas à la situation la plus récente pour cet usager". Sinon, le champ est absent de la réponse.'
+        description: 'S''il existe un correctif plus récent que l''avis contrôlé, ce champ prend la valeur "Ce document ne correspond pas à la situation la plus récente pour cet usager". Sinon, le champ est absent de la réponse. La présence de ce champ indique qu''il existe un avis d''imposition avec un numéro d''avis distinct qui contient les informations plus récentes. L''API Particulier peut fournir cet avis à condition de connaître le numéro de l''avis le plus récent. L''API Particulier ne peut pas fournir le numéro de l''avis le plus récent en réponse de l''appel initial. Pour trouver le numéro de cet avis, il faut le demander au particulier auquel l''avis est adressé ou le trouver via une source d''information tierce auprès de la DGFiP.'
       situationPartielle:
         type: string
         description: 'Le champ "situationPartielle" indique, dans un foyer marié ou pacsé, le décès d''un des contribuables. Cela signifie qu''il y aura 2 avis de taxations pour une même année : une taxation pour le couple du 01/01/AAAA à la date du décès d''un déclarant, et une autre taxation, pour le conjoint survivant, de la date de décès du conjoint au 31/12/AAAA. Ce champ prend la valeur "(*) Situation  {anneeRevenus}  partielle". Sinon, le champ est absent de la réponse.'
