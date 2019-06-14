@@ -64,14 +64,14 @@ paths:
       parameters:
       - name: numeroFiscal
         in: query
-        description: Numéro fiscal
+        description: Numéro fiscal propre à chaque citoyen (identifiant numérique de 13 chiffres)
         required: true
         type: number
         format: string
         default: "1702599999001"
       - name: referenceAvis
         in: query
-        description: Référence d'avis
+        description: Référence de l'avis fiscal (identifiant numérique de 13 chiffres). Attention, il est possible que l'utilisateur ajoute une quatorzième lettre à la fin de sa référence d'avis. Il s'agit d'une clé de vérification, il est nécessaire de l'enlever avant de l'envoyer sur l'API Particulier.
         required: true
         type: string
         default: "1702599999001"
