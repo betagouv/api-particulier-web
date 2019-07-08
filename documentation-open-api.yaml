@@ -272,10 +272,10 @@ definitions:
         description: 'Revenu imposable'
       impotRevenuNetAvantCorrections:
         type: integer
-        description: 'Revenu net avant correction'
+        description: 'Revenu net avant correction. Prend la valeur null dans le cas d''un revenu non imposable.'
       montantImpot:
         type: integer
-        description: 'Total de l’impôt sur le revenu net'
+        description: 'Total de l’impôt sur le revenu net. Prend la valeur null dans le cas d''un revenu non imposable.'
       revenuFiscalReference:
         type: integer
         description: 'Revenu fiscal de référence'
