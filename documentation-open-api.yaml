@@ -35,11 +35,14 @@ info:
 
      **Important :** la taille du jeu de données retournées dépend du *scope* de la clé d'API utilisée. Certaines clés n'autorisent qu'un nombre réduit de donnée. Ainsi, suivant la clé utilisée, une même requête peut retourner des résultats différents. En effet, les disposition de l'article [L144-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) n'autorise que l'échange des informations **strictement nécessaire** pour traiter une démarche. En conséquence, pendant vos tests, assurez-vous d'utiliser la clé d'API associé au *scope* correspondant aux données auxquelles vous aurez accès d'un point de vue légal.
 
-    ### Informations d'identifications de particulier de test
+    ### Données de test
 
-    Des informations d'identifications de particuliers de test sont disponibles en ligne : [données de la CAF](https://github.com/betagouv/api-particulier/blob/master/api/caf/fake-responses.json) et [données des impôts](https://github.com/betagouv/svair-mock/blob/master/data/seed.csv).
+    Des informations d'identifications de particuliers de test sont disponibles en ligne :
 
-    Si vous souhaitez tester un cas qui n'est pas encore présent, nous vous invitons à faire une demande de modification sur ces fichiers (via une [pull request](https://help.github.com/articles/about-pull-requests/)).
+    1. [données de la CAF](https://github.com/betagouv/api-particulier/blob/master/api/caf/fake-responses.json)
+    2. [données des impôts](https://github.com/betagouv/svair-mock/blob/master/data/seed.csv)
+
+    Si vous souhaitez tester un cas qui n'est pas encore présent, nous vous invitons à ajouter le cas via une demande de modification sur ces fichiers (suivre ce [tutoriel en anglais](https://help.github.com/en/articles/editing-files-in-another-users-repository) si besoin).
 
     ## Comment passer de l'environnement de test à l'environnement de production
 
