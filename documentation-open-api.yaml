@@ -26,12 +26,13 @@ info:
 
     Voici la liste des tokens d'API de tests. Chacun donne accès à un *scope* différent.
 
-    | Source | Scope                     | Token                            |
-    |--------|---------------------------|----------------------------------|
-    | /impots| DGFIP - Avis d'imposition | 83c68bf0b6013c4daf3f8213f7212aa5 |
-    | /impots| DGFIP - Adresse           | 02013fe1b5221dd7d914e4406fb88891 |
-    | /caf   | CNAF - Quotient familial  | 73af98c480aa3abfd38830ec5c5354d8 |
-    | /caf   | CNAF - Attestation droits | 3841b13fa8032ed3c31d160d3437a76a |
+    | Scope                                                      | Token                            |
+    |------------------------------------------------------------|----------------------------------|
+    | DGFIP - Avis d'imposition                                  | 83c68bf0b6013c4daf3f8213f7212aa5 |
+    | DGFIP - Adresse                                            | 02013fe1b5221dd7d914e4406fb88891 |
+    | CNAF - Quotient familial                                   | 73af98c480aa3abfd38830ec5c5354d8 |
+    | CNAF - Attestation droits                                  | 3841b13fa8032ed3c31d160d3437a76a |
+    | "DGFIP - Avis d'imposition" et "CNAF - Attestation droits" | d7e9c9f4c3ca00caadde31f50fd4521a |
 
      **Important :** la taille du jeu de données retournées dépend du *scope* de la clé d'API utilisée. Certaines clés n'autorisent qu'un nombre réduit de donnée. Ainsi, suivant la clé utilisée, une même requête peut retourner des résultats différents. En effet, les disposition de l'article [L144-8](https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000031366350&idArticle=LEGIARTI000031367412&dateTexte=&categorieLien=cid) n'autorise que l'échange des informations **strictement nécessaire** pour traiter une démarche. En conséquence, pendant vos tests, assurez-vous d'utiliser la clé d'API associé au *scope* correspondant aux données auxquelles vous aurez accès d'un point de vue légal.
 
