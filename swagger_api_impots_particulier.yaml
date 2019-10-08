@@ -5,21 +5,7 @@ info:
     # Bienvenue sur la documentation interactive de l'API Impôt Particulier.
 
 
-    L'API Impôt Particulier est une API qui permet de restituer des données
-    fiscales relative à une personne physique utilisant une téléservice
-    FranceConnecté.
-
-    Pour utiliser l'API Impôt Particulier en production, vous devez initier une
-    demande de raccordement sur l'espace dédié : (http://signup.api.gouv.fr).
-
-
     ## L'appel de l'API impôt particulier
-
-
-    Le token d'API à utiliser est un token de test. En production, ce dernier
-    est obtenu auprès de FranceConnect lors de la cinématique permettant la
-    récupération du consentement de
-    l'usager.(https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service)
 
 
     **Important :** Le périmètre de la réponse de l'API dépend du (ou des)
@@ -34,46 +20,34 @@ info:
     accès d'un point de vue légal.
 
 
-    ## Données retournées - Scope - Token de test
-
-
-    Voici la liste des tokens de tests. Chacun d'entre eux donne accès à un
-    *scope* différent.
+    ## Données retournées - Scope
 
     Les données présentes dans chaque scope, leur nature et leur signification
-    fonctionnelle sont décrites plus précisément dans les modèles ci-après.  
+    fonctionnelle sont décrites plus précisément dans les modèles ci-après.
 
+    | Données                           | Scope           |
 
-    | Données                           | Scope             |
-    Token                  |
+    |-----------------------------------|-----------------|
 
-    |-----------------------------------|-------------------|------------------------|
+    | Revenu fiscal de référence        | dgfip_rfr       |
 
-    |Revenu fiscal de référence         | dgfip_rfr        
-    |83c68bf0b6013c4daf3f8213f7212aa5 
+    | Nombre de parts fiscales          | dgfip_nbpart    |
 
-    |Nombre de parts fiscales           | dgfip_nbpart     
-    |02013fe1b5221dd7d914e4406fb88891
+    | Adresse fiscale de taxation       | dgfip_aft       |
 
-    |Adresse fiscale de taxation        | dgfip_aft        
-    |73af98c480aa3abfd38830ec5c5354d8 
+    | Données du local                  | dgfip_locaux_th |
 
-    |Données du local                   | dgfip_locaux_th  
-    |a02506b31c1cd46c2e0b6380fb94eb3d
+    N.B. : En fonction de votre fondement légal et de votre cas, vous pourrez
+    être amené à solliciter plusieurs scopes concomitamment.
 
-    |
+    ## L'environnement de tests proposé par la DGFiP
 
-
-    N.B. : En fonction de votre fondement légal et de votre cas , vous pourrez
-    être amené à solliciter plusieurs scopes concomitamment. 
-
-     ## L'environnement de tests proposé par la DGFiP
     Une fois votre demande de souscription pré-validée par la DGFiP, vous pouvez
     accéder à un environnement test.
 
 
     Le périmètre des réponses de  cet environnement de test est
-    fonctionnellement identique à l'environnement de production. 
+    fonctionnellement identique à l'environnement de production.
 
 
     Un jeu de données fictives avec plusieurs cas nominaux vous permet de valider
@@ -86,27 +60,8 @@ info:
     Lors du développement de votre solution logicielle, nous vous recommandons
     d'utiliser cet environnement.
 
-
-      
-    ### Jeu de données fictifs
-
-
-    Des données complémentaires de test sont disponibles en ligne :
-    https://github.com/betagouv/svair-mock/blob/master/data/seed.csv
-
-
-    Si vous souhaitez tester un cas qui n'est pas encore présent, nous vous
-    invitons à faire une demande de modification sur ces fichiers (via une [pull
-    request](https://help.github.com/articles/about-pull-requests/)).
-
-
-    ## Environnement de test intégré à l'éco-système FranceConnect
-
-
-    [À venir...]
-    
   version: 1.0.0
-host: 'localhost:3000'
+host: 'null'
 basePath: /
 schemes:
   - https
@@ -118,7 +73,7 @@ paths:
       summary: Situation IR
       description: >
         Ce endpoint permet d'obtenir des informations relatives à la situation
-        fiscale du demandeur. 
+        fiscale du demandeur.
       parameters:
         - in: path
           name: ANNEE
@@ -129,14 +84,6 @@ paths:
             Pour avoir les revenus de l'avis 2018, je sollicite l'API avec le
             paramètre "AnnRev" 2017
           default: 2017
-        - name: Bearer
-          in: header
-          description: >-
-            Il s'agit du token d'accès récupéré auprès de FranceConnect suite au
-            consentement de l'usager
-          required: true
-          type: string
-          default: 83c68bf0b6013c4daf3f8213f7212aa5
       tags:
         - Impôt sur le revenu (IR)
       responses:
