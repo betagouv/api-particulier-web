@@ -134,7 +134,7 @@
 <script>
     (function() {
         var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://monitoring.particulier.api.gouv.fr/api/stats/count/particulier.api.gouv.fr?range[@timestamp][gte]=now-30d&match[status-code]=200', true);
+        xhr.open('get', 'https://monitoring.particulier.api.gouv.fr/api/stats/', true);
         xhr.responseType = 'json';
         xhr.onload = function() {
             var status = xhr.status;
