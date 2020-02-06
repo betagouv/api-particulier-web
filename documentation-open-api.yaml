@@ -40,7 +40,7 @@ info:
 
     Des informations d'identification de particuliers de test sont disponibles en ligne :
 
-    1. [données de la CAF](https://github.com/betagouv/api-particulier/blob/master/api/caf/fake-responses.json)
+    1. [données de la CAF](https://github.com/betagouv/api-particulier/blob/master/api-particulier/api/caf/fake-responses.json)
     2. [données des impôts](https://svair-mock-data.netlify.com/)
 
     Si vous souhaitez tester un cas qui n'est pas encore présent, nous vous invitons à ajouter le cas dans [l'application de gestion des cas de test](https://svair-mock-data.netlify.com/) directement.
