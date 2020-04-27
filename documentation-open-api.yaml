@@ -271,18 +271,23 @@ definitions:
       revenuBrutGlobal:
         type: integer
         description: "Revenu brut global"
+        nullable: true
       revenuImposable:
         type: integer
         description: "Revenu imposable"
+        nullable: true
       impotRevenuNetAvantCorrections:
         type: integer
         description: "Revenu net avant correction. Prend la valeur null dans le cas d'un revenu non imposable."
+        nullable: true
       montantImpot:
         type: integer
         description: "Total de l’impôt sur le revenu net. Prend la valeur null dans le cas d'un revenu non imposable."
+        nullable: true
       revenuFiscalReference:
         type: integer
         description: "Revenu fiscal de référence"
+        nullable: true
       anneeImpots:
         type: string
         description: "Année au format: AAAA"
