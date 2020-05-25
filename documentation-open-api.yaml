@@ -506,7 +506,7 @@ components:
       schema:
         type: number
         format: string
-        default: "1902599999001"
+        example: "1902599999001"
     ReferenceAvis:
       name: referenceAvis
       in: query
@@ -514,7 +514,7 @@ components:
       required: true
       schema:
         type: string
-        default: "1902599999001"
+        example: "1902599999001"
     User:
       name: X-User
       in: header
@@ -522,7 +522,7 @@ components:
       required: false
       schema:
         type: string
-        default: "Badul Badul"
+        example: "Badul Badul"
     NumeroAllocataire:
       name: numeroAllocataire
       in: query
@@ -531,7 +531,7 @@ components:
       schema:
         type: number
         format: string
-        default: "0000354"
+        example: "0000354"
     CodePostal:
       name: codePostal
       in: query
@@ -540,7 +540,7 @@ components:
       schema:
         type: number
         format: string
-        default: "99148"
+        example: "99148"
   securitySchemes:
     "Clé d'API":
       type: apiKey
