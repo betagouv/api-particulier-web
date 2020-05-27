@@ -165,7 +165,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-  /v2/situation-familiale:
+  /v2/composition-familiale:
     get:
       summary: Informations concernant la famille
       description: |
