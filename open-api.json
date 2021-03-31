@@ -182,7 +182,7 @@
       }
     },
     "/v2/situations-pole-emploi": {
-      "$ref": "//portail.api.gouv.fr/api-particulier/pole-emploi-sandbox/swagger.json#/paths/~1v2~1situations-pole-emploi"
+      "$ref": "//portail.api.gouv.fr/api-particulier/pole-emploi-sandbox/swagger-json#/paths/~1v2~1situations-pole-emploi"
     },
     "/v2/etudiants": {
       "$ref": "//portail.api.gouv.fr/api-particulier/mesri-sandbox/swagger.json#/paths/~1v2~1etudiants"
