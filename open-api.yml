@@ -283,8 +283,30 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
   /v2/situations-pole-emploi:
-    $ref: >-
-      //portail.api.gouv.fr/api-particulier/pole-emploi-sandbox/swagger-json#/paths/~1v2~1situations-pole-emploi
+    get:
+      operationId: JobSeekerController_searchJobSeekerSituation
+      summary: Recherche de la situation Pôle Emploi d'un individu
+      parameters:
+        - name: identifiant
+          required: true
+          in: query
+          description: 'Identifiant Pôle Emploi de l''individu recherché, aussi appelé PeamU'
+          example: georges_moustaki_77
+          schema:
+            type: string
+      responses:
+        '200':
+          description: La situation Pôle Emploi d'un individu
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobSeekerSituation'
+        '404':
+          description: Individu introuvable
+        '502':
+          description: Erreur en provenance des services Pôle Emploi
+      tags:
+        - Pôle Emploi
   /v2/etudiants:
     $ref: >-
       //portail.api.gouv.fr/api-particulier/mesri-sandbox/swagger.json#/paths/~1v2~1etudiants
@@ -717,3 +739,61 @@ components:
           type: string
         error:
           type: string
+    Address:
+      type: object
+      properties:
+        codePostal:
+          type: string
+        INSEECommune:
+          type: string
+        localite:
+          type: string
+        ligneVoie:
+          type: string
+        ligneComplementDestinaire:
+          type: string
+        ligneComplementAdresse:
+          type: string
+        ligneComplementDistribution:
+          type: string
+        ligneNom:
+          type: string
+    JobSeekerSituation:
+      type: object
+      properties:
+        identifiant:
+          type: string
+        civilite:
+          type: string
+        nom:
+          type: string
+        nomUsage:
+          type: string
+        prenom:
+          type: string
+        sexe:
+          type: string
+        dateNaissance:
+          format: date-time
+          type: string
+        codeCertificationCNAV:
+          type: string
+        telephone:
+          type: string
+        telephone2:
+          type: string
+        email:
+          type: string
+        adresse:
+          $ref: '#/components/schemas/Address'
+        dateInscription:
+          format: date-time
+          type: string
+        dateCessationInscription:
+          format: date-time
+          type: string
+        categorieInscription:
+          type: string
+      required:
+        - identifiant
+        - adresse
