@@ -469,9 +469,11 @@ components:
         name:
           type: string
           description: Nom associé au token
-        email:
-          type: string
-          description: email de contact associé au token
+        scopes:
+          type: array
+          description: Scopes techniques associés au token
+          items:
+            type: string
     AvisImposition:
       type: object
       properties:
