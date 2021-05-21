@@ -56,6 +56,7 @@ info:
     Voici la liste des clés d'API de tests. Chacun donne accès à un *scope*
     différent.
 
+    Les clés d'API de bac à sable sont des chaines alphanumériques de 32 caractères, les clés d'API de production sont des UUIDv4.
 
     | Scope                                                      |
     Token                            |
