@@ -318,8 +318,25 @@ paths:
       tags:
         - Pôle Emploi
   /v2/etudiants:
-    $ref: >-
-      //portail.api.gouv.fr/api-particulier/mesri-sandbox/swagger.json#/paths/~1v2~1etudiants
+    get:
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiant'
+        '404':
+          description: Étudiant introuvable
+      operationId: get_student
+      parameters:
+        - name: ine
+          in: query
+          schema:
+            type: string
+          required: true
+      tags:
+        - Statut étudiant
   /introspect:
     get:
       summary: Introspection du token donné en paramètre
@@ -809,3 +826,85 @@ components:
       required:
         - identifiant
         - adresse
+    Etudiant:
+      required:
+        - dateNaissance
+        - nom
+        - prenom
+      properties:
+        ine:
+          type: string
+          description: Identifiant unique de l'étudiant
+          example: 1234567890G
+        nom:
+          type: string
+          description: Le nom de naissance
+          example: Moustaki
+        prenom:
+          type: string
+          description: Le prénom
+          example: Georges
+          maxLength: 13
+        dateNaissance:
+          type: string
+          format: date-time
+          description: La date de naissance
+          example: 1992-11-29T00:00:00
+        inscriptions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Inscription"
+      type: object
+    Inscription:
+      required:
+        - codeCommune
+        - dateDebutInscription
+        - dateFinInscription
+        - regime
+        - statut
+      properties:
+        dateDebutInscription:
+          type: string
+          format: date-time
+          description: La date de début d'inscription à l'établissement
+          example: 2019-09-01T00:00:00
+        dateFinInscription:
+          type: string
+          format: date-time
+          description: La date de fin d'inscription à l'établissement
+          example: 2020-06-29T00:00:00
+        statut:
+          type: string
+          description: Le statut de l'inscription
+          example: admis
+          enum:
+            - admis
+            - inscrit
+        regime:
+          type: string
+          description: Le régime de formation
+          example: formation initiale
+          enum:
+            - formation initiale
+            - formation continue
+        codeCommune:
+          type: string
+          description: Le code commune
+          example: "29085"
+        etablissement:
+          $ref: "#/components/schemas/Etablissement"
+      type: object
+    Etablissement:
+      required:
+        - nom
+        - uai
+      properties:
+        uai:
+          type: string
+          description: Identifiant unique de l'établissement
+          example: 0011402U
+        nom:
+          type: string
+          description: Nom de l'établissement
+          example: EGC AIN BOURG EN BRESSE EC GESTION ET COMMERCE (01000)
+      type: object
