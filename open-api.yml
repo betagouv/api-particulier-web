@@ -56,7 +56,7 @@ info:
     Voici la liste des clés d'API de tests. Chacun donne accès à un *scope*
     différent.
 
-    Les clés d'API de bac à sable sont des chaines alphanumériques de 32 caractères, les clés d'API de production sont des UUIDv4.
+    Les clés d'API de bac à sable sont des chaines alphanumériques de 32 caractères et des UUIDv4, les clés d'API de production sont des UUIDv4.
 
     | Scope                                                      |
     Token                            |
@@ -74,6 +74,15 @@ info:
 
     | CNAF - Situation familiale                                 |
     3841b13fa8032ed3c31d160d3437a76a |
+
+    | CNAF - Adresse                                      |
+    e0a109ba-8e2b-4809-95c5-6a818dda2351 |
+
+    | CNAF - Enfants                                 |
+    ce469960-7bfc-401d-8599-686d158939ae |
+
+    | CNAF - Allocataires                                 |
+    ea903339-692b-4cc2-96b3-09a2d6acd4d2 |
 
     | "DGFIP - Avis d'imposition" et "CNAF - Situation familiale"|
     d7e9c9f4c3ca00caadde31f50fd4521a |
