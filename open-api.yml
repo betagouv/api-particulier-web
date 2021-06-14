@@ -90,7 +90,7 @@ info:
     | "DGFIP - Avis d'imposition", "CNAF - Situation familiale" et "CNAF - Quotient Familial"|
     fb156a4e-d497-480f-b3ef-9bc1bccdfbb9 |
 
-    | Pôle Emploi - Situation individu                           |
+    | Pôle Emploi - Identité, Contact, Adresse et Inscription                           |
     fd38830c480221d0ff0b6013c4de6c32 |
 
     | Statut Étudiant                                            |
@@ -824,7 +824,9 @@ components:
         dateCessationInscription:
           format: date-time
           type: string
-        categorieInscription:
+        codeCategorieInscription:
+          type: integer
+        libelleCategorieInscription:
           type: string
       required:
         - identifiant
